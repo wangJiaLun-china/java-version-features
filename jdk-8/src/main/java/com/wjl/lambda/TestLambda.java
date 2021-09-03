@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.*;
 
 /**
+ *  lambda, Stream API 与传统策略模式实现代码对比
  * @author wangJiaLun
  * @date 2021-09-02
  **/

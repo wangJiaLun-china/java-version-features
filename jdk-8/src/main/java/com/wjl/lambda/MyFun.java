@@ -5,7 +5,7 @@ package com.wjl.lambda;
  * @date 2021-09-03
  **/
 @FunctionalInterface
-public interface MyPredicate<T> {
+public interface MyFun {
 
-    boolean test(Employee t);
+    public Integer getValue(Integer num);
 }
