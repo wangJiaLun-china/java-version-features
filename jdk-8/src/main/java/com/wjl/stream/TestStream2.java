@@ -121,4 +121,27 @@ public class TestStream2 {
         return list.stream();
     }
 
+    // 中间操作
+    /*
+        sorted()——自然排序
+        sorted(Comparator com)——定制排序
+     */
+    @Test
+    public void test(){
+        employees.stream()
+                .map(Employee::getName)
+                .sorted()
+                .forEach(System.out::println);
+
+        System.out.println("------------------------------------");
+
+        employees.stream()
+                .sorted((x, y) -> {
+                    if(x.getAge() == y.getAge()){
+                        return x.getName().compareTo(y.getName());
+                    }else{
+                        return Integer.compare(x.getAge(), y.getAge());
+                    }
+                }).forEach(System.out::println);
+    }
 }
